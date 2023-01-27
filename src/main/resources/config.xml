@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/beans/spring-context.xsd
+">
+
+
+    <bean id="Student1" class="org.example.firstproject.Student">
+        <property name="studentID">
+            <value>
+                123456
+            </value>
+        </property>
+        <property name="studentName">
+            <value>
+                Deependra
+            </value>
+        </property>
+        <property name="studentAddress">
+            <value>
+                Maihar
+            </value>
+        </property>
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+    <bean id="Student2" class="org.example.firstproject.Student">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="studentID">
+            <value>
+                123456
+            </value>
+        </property>
+        <property name="studentName">
+            <value>
+                Pushpendra
+            </value>
+        </property>
+        <property name="studentAddress">
+            <value>
+                Maihar
+            </value>
+        </property>
+    </bean>
+    <!-- more bean definitions go here -->
+</beans>
