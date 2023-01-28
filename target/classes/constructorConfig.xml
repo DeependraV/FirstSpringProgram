@@ -9,6 +9,27 @@
 
     <bean class="org.example.firstproject.CollectionBeans.Employees" name="conemp">
         <constructor-arg value="Deependra"/>
+        <constructor-arg>
+            <list>
+                <value>Deependra</value>
+                <value>Pushpendra</value>
+                <value>Vivek</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <set>
+                <value>Maihar</value>
+                <value>Sarlanagar</value>
+                <value>Satna</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="Java" value="2 Week"/>
+                <entry key="Spring" value="1 Week"/>
+                <entry key="Spring Boot and Micro Services" value="1 Month"/>
+            </map>
+        </constructor-arg>
     </bean>
     <!-- more bean definitions go here -->
 </beans>
