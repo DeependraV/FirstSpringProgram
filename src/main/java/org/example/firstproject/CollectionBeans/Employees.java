@@ -5,11 +5,22 @@ import java.util.Map;
 import java.util.Set;
 
 public class Employees {
+    public Employees(String name) {
+        this.name = name;
+    }
+
     private String name;
     private List<String> phones;
     private Set<String> address;
     private Map<String,String> courses;
 
+
+    public Employees(String name, List<String> phones, Set<String> address, Map<String, String> courses) {
+        this.name = name;
+        this.phones = phones;
+        this.address = address;
+        this.courses = courses;
+    }
 
     public Employees() {
     }
