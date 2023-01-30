@@ -6,13 +6,13 @@ import javax.annotation.PreDestroy;
 public class AnnotationLifeCycle {
     private int price;
 
-    @PreDestroy
-    public  void init()
+    @PostConstruct
+    public  void start()
     {
         System.out.println("This is init method for Annotation based  ");
     }
-    @PostConstruct
-    public void destroy()
+    @PreDestroy
+    public void end()
     {
         System.out.println("This is destroy Method for Annotation based");
     }
