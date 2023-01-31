@@ -21,7 +21,7 @@ public class App
         System.out.println("Hello World!");
 
         //Primitive Data type Dependency Injection
-        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("firstprojectConfigFiles/config.xml");
         Student student1 = (Student) context.getBean("Student1");
         System.out.println(student1);
         Student student2 = (Student) context.getBean("Student2");
@@ -29,19 +29,19 @@ public class App
 
         //Collection Config
         System.out.println("-----------------------Collection-----------------------");
-        ApplicationContext context2=new ClassPathXmlApplicationContext("collectionConfig.xml");
+        ApplicationContext context2=new ClassPathXmlApplicationContext("firstprojectConfigFiles/collectionConfig.xml");
         Employees emp=(Employees)context2.getBean("Employee1");
         System.out.println(emp);
 
         //Reference Config
         System.out.println("---------------------Reference Config-------------------");
-        ApplicationContext context3 =new ClassPathXmlApplicationContext("refConfig.xml");
+        ApplicationContext context3 =new ClassPathXmlApplicationContext("firstprojectConfigFiles/refConfig.xml");
         A a=(A) context3.getBean("A1");
         System.out.println(a);
 
         //constructor Collection config
         System.out.println("-------------------------constructor------------------");
-        ApplicationContext context4 = new ClassPathXmlApplicationContext("constructorConfig.xml");
+        ApplicationContext context4 = new ClassPathXmlApplicationContext("firstprojectConfigFiles/constructorConfig.xml");
         Employees employee = (Employees) context4.getBean("conemp");
         System.out.println(employee);
 
@@ -49,7 +49,7 @@ public class App
         //Life Cycle Testing - 2 ways -  By using Bean XML, By using Interface
         //1. By using Bean XML
         System.out.println("---------------Life Cycle Testing");
-        AbstractApplicationContext context5=new ClassPathXmlApplicationContext("lifecycleconfig.xml");
+        AbstractApplicationContext context5=new ClassPathXmlApplicationContext("firstprojectConfigFiles/lifecycleconfig.xml");
         Samosa samosa= (Samosa) context5.getBean("samosa");
         //If we want to execute destroy method of Spring life cycle we have to use that hook method but
         //that is not available in ApplicatinContext Class we that is in AbstractApplicationContext
@@ -58,14 +58,15 @@ public class App
 
         //2. Interface (for init -  InitializingBean,for destroy- DisposableBean)
         System.out.println("--------Liife Cycle using Interface");
-        ApplicationContext context6=new ClassPathXmlApplicationContext("lifecycleconfig.xml");
+        ApplicationContext context6=new ClassPathXmlApplicationContext("firstprojectConfigFiles/lifecycleconfig.xml");
         Pepsi pepsi=(Pepsi) context6.getBean("pepsi");
         System.out.println(pepsi);
 
         //3.Using Annotation  @PostConstruct, @PreDestroy
         System.out.println("----------------------Annotation Based Life cycle implementation");
-        AbstractApplicationContext context7=new ClassPathXmlApplicationContext("lifecycleconfig.xml");
+        AbstractApplicationContext context7=new ClassPathXmlApplicationContext("firstprojectConfigFiles/lifecycleconfig.xml");
         AnnotationLifeCycle annotationLifeCycle=(AnnotationLifeCycle) context7.getBean("ablc");
         System.out.println(annotationLifeCycle);
+
     }
 }
